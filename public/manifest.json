@@ -1,0 +1,16 @@
+{
+  "name": "Powernest",
+  "short_name": "Powernest",
+  "description": "Powernest Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
