@@ -202,7 +202,7 @@ export default function PrivacyPolicy() {
               <p className="text-gray-300 flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
                 <span>
-                  <strong className="text-white">Address:</strong> Stevens Point, Wisconsin 2733 Stanley Street
+                  <strong className="text-white">Address:</strong> 3744 Amboy Road, Staten Island, New York 10308
                 </span>
               </p>
             </div>

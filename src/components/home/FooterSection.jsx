@@ -39,7 +39,7 @@ export default function FooterSection() {
               </a>
               <div className="flex items-center gap-2 text-sm text-gray-400">
                 <MapPin className="w-4 h-4" />
-                418 Broadway Ste N Albany NY 12207
+                3744 Amboy Road, Staten Island, New York 10308
               </div>
             </div>
           </div>
