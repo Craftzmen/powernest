@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Portfolio", page: "Portfolio" },
   { label: "Team", page: "Team" },
   { label: "How It Works", page: "HowItWorks" },
-  { label: "Contact", page: "Contact" },
+  { label: "Finance", page: "Finance" },
 ];
 
 export default function Layout({ children }) {
@@ -111,7 +111,7 @@ export default function Layout({ children }) {
               onClick={() => handleNavClick("Contact")}
               className="px-5 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20"
             >
-              Get Started
+              Contact
             </button>
           </div>
 
@@ -165,7 +165,7 @@ export default function Layout({ children }) {
                   onClick={() => handleNavClick("Contact")}
                   className="w-full mt-2 px-5 py-3 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors"
                 >
-                  Get Started
+                  Contact
                 </button>
               </div>
             </motion.div>
