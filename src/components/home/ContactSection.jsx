@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "query@powernest.it.com", sub: "We reply within 24 hours" },
-  { icon: Phone, label: "Call Us", value: "+1 (802) 242-2991", sub: "Mon-Fri 9AM - 6PM" },
+  { icon: Phone, label: "Call Us", value: "888 286 8307", sub: "Mon-Fri 9AM - 6PM" },
   { icon: MapPin, label: "Visit Us", value: "3744 Amboy Road", sub: "Staten Island, New York 10308" },
   { icon: Globe, label: "Website", value: "powernest.it.com", sub: "Learn more about us" },
 ];

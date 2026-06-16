@@ -33,9 +33,9 @@ export default function FooterSection() {
                 <Mail className="w-4 h-4" />
                 query@powernest.it.com
               </a>
-              <a href="tel:+15551234567" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="tel:+18882868307" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 <Phone className="w-4 h-4" />
-                +1 (802) 242-2991
+                888 286 8307
               </a>
               <div className="flex items-center gap-2 text-sm text-gray-400">
                 <MapPin className="w-4 h-4" />

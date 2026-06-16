@@ -7,7 +7,7 @@ const features = [
   { icon: CreditCard, label: "Instant Eligibility Check" },
 ];
 
-export default function FinanceAssistancePopup({ open, onClose, phone = "+1 (802) 242-2991" }) {
+export default function FinanceAssistancePopup({ open, onClose, phone = "888 286 8307" }) {
   const digits = phone.replace(/\D/g, "");
   const telHref = digits.length === 11 && digits.startsWith("1") ? `tel:+${digits}` : `tel:+1${digits}`;
 
