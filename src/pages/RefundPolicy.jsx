@@ -155,8 +155,8 @@ export default function RefundPolicy() {
             <div className="space-y-2">
               <p className="text-gray-300">
                 <strong className="text-white">Email:</strong>{" "}
-                <a href="mailto:info@powernest.it.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  info@powernest.it.com
+                <a href="mailto:query@primeautodeals.live" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  query@primeautodeals.live
                 </a>
               </p>
               <p className="text-gray-300">

@@ -29,9 +29,9 @@ export default function FooterSection() {
               Your vision, our expertise.
             </p>
             <div className="space-y-2">
-              <a href="mailto:info@powernest.it.com" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="mailto:query@primeautodeals.live" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                query@powernest.it.com
+                query@primeautodeals.live
               </a>
               <a href="tel:+18882868307" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 <Phone className="w-4 h-4" />

@@ -195,8 +195,8 @@ export default function PrivacyPolicy() {
               <p className="text-gray-300 flex items-center gap-2">
                 <Mail className="w-4 h-4 text-emerald-400" />
                 <strong className="text-white">Email:</strong>{" "}
-                <a href="mailto:info@powernest.it.com" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                  info@powernest.it.com
+                <a href="mailto:query@primeautodeals.live" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                  query@primeautodeals.live
                 </a>
               </p>
               <p className="text-gray-300 flex items-start gap-2">
