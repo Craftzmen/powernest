@@ -18,6 +18,7 @@ import {
 import { createPageUrl } from "../utils";
 import FooterSection from "../components/home/FooterSection";
 import FinanceAssistancePopup from "../components/finance/FinanceAssistancePopup";
+import { siteContact } from "../lib/siteContact";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1718780138801-d93ebf484827?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -169,13 +170,14 @@ export default function Finance() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button
-                onClick={() => setShowPopup(true)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20"
+              <a
+                href={siteContact.phoneHref}
+                title={siteContact.phoneTitle}
+                className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20 active:opacity-90"
               >
                 <Phone className="w-4 h-4" />
                 Speak to an Advisor
-              </button>
+              </a>
               <a
                 href={createPageUrl("Contact")}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white border border-white/10 hover:bg-white/5 rounded-lg transition-all duration-300"
@@ -409,13 +411,14 @@ export default function Finance() {
                 journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => setShowPopup(true)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20"
+                <a
+                  href={siteContact.phoneHref}
+                  title={siteContact.phoneTitle}
+                  className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20 active:opacity-90"
                 >
                   <Phone className="w-4 h-4" />
                   Speak to an Advisor
-                </button>
+                </a>
                 <a
                   href={createPageUrl("Contact")}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white border border-white/10 hover:bg-white/5 rounded-lg transition-all duration-300"

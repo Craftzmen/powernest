@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, X, Zap, CreditCard } from "lucide-react";
+import { siteContact } from "../../lib/siteContact";
 
 const features = [
   { icon: Zap, label: "Fast & Easy Application" },
   { icon: CreditCard, label: "Instant Eligibility Check" },
 ];
 
-export default function FinanceAssistancePopup({ open, onClose, phone = "888 286 8307" }) {
-  const digits = phone.replace(/\D/g, "");
-  const telHref = digits.length === 11 && digits.startsWith("1") ? `tel:+${digits}` : `tel:+1${digits}`;
+export default function FinanceAssistancePopup({ open, onClose, phone = siteContact.phoneDisplay }) {
+  const telHref = siteContact.phoneHref;
 
   if (!open) return null;
 
@@ -75,16 +75,19 @@ export default function FinanceAssistancePopup({ open, onClose, phone = "888 286
           {/* Call CTA */}
           <a
             href={telHref}
-            className="group flex items-center justify-between gap-3 w-full px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30"
+            title={siteContact.phoneTitle}
+            className="group flex min-h-11 w-full flex-col items-center justify-center gap-1 rounded-xl bg-blue-600 px-5 py-3.5 hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30 active:opacity-90"
           >
-            <span className="text-base sm:text-lg font-bold text-white tracking-tight">
-              Call {phone}
+            <span className="flex w-full items-center justify-between gap-3">
+              <span className="text-base sm:text-lg font-bold text-white tracking-tight">
+                Call {phone}
+              </span>
+              <Phone className="w-5 h-5 shrink-0 text-white group-hover:scale-110 transition-transform" />
             </span>
-            <Phone className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+            <span className="text-[10px] font-semibold tracking-[0.2em] text-white/70 uppercase">
+              Call Right Now
+            </span>
           </a>
-          <p className="text-center text-[10px] font-semibold tracking-[0.2em] text-gray-500 uppercase mt-3">
-            Call Right Now
-          </p>
         </div>
       </div>
     </motion.div>

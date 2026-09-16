@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { RefreshCw, CheckCircle2, XCircle, Clock, Mail } from "lucide-react";
+import { RefreshCw, CheckCircle2, XCircle, Clock, Phone } from "lucide-react";
+import { siteContact } from "../lib/siteContact";
 import FooterSection from "../components/home/FooterSection";
 
 export default function RefundPolicy() {
@@ -148,21 +149,19 @@ export default function RefundPolicy() {
           {/* Contact */}
           <section className="rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <Mail className="w-6 h-6 text-blue-400" />
+              <Phone className="w-6 h-6 text-blue-400" />
               <h2 className="text-2xl font-bold text-white">Contact for Refund Requests</h2>
             </div>
-            <p className="text-gray-300 mb-4">To request a refund, please contact us:</p>
-            <div className="space-y-2">
-              <p className="text-gray-300">
-                <strong className="text-white">Email:</strong>{" "}
-                <a href="mailto:query@primeautodeals.live" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  query@primeautodeals.live
-                </a>
-              </p>
-              <p className="text-gray-300">
-                <strong className="text-white">Subject:</strong> Refund Request
-              </p>
-            </div>
+            <p className="text-gray-300 mb-4">To request a refund, call us:</p>
+            <a
+              href={siteContact.phoneHref}
+              title={siteContact.phoneTitle}
+              className="inline-flex min-h-11 items-center gap-2 font-semibold text-blue-400 hover:text-blue-300 transition-colors active:opacity-90"
+            >
+              <Phone className="w-4 h-4" />
+              {siteContact.phoneDisplay}
+            </a>
+            <p className="text-gray-500 text-sm mt-3">Mention &quot;Refund Request&quot; when you speak with our team.</p>
           </section>
         </motion.div>
       </div>

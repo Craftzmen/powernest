@@ -3,14 +3,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
-
-const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "query@primeautodeals.live", sub: "We reply within 24 hours" },
-  { icon: Phone, label: "Call Us", value: "888 286 8307", sub: "Mon-Fri 9AM - 6PM" },
-  { icon: MapPin, label: "Visit Us", value: "3744 Amboy Road", sub: "Staten Island, New York 10308" },
-  { icon: Globe, label: "Website", value: "powernest.it.com", sub: "Learn more about us" },
-];
+import { Phone, Send, Clock } from "lucide-react";
+import { siteContact } from "../../lib/siteContact";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
@@ -50,7 +44,6 @@ export default function ContactSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,27 +51,25 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2 space-y-4"
           >
-            {contactInfo.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="flex items-start gap-4 p-5 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-4 h-4 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="text-white font-medium">{item.value}</p>
-                  <p className="text-sm text-gray-500 mt-0.5">{item.sub}</p>
-                </div>
-              </motion.div>
-            ))}
+            <motion.a
+              href={siteContact.phoneHref}
+              title={siteContact.phoneTitle}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="flex min-h-[120px] w-full items-start gap-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 transition-colors hover:bg-white/[0.04] active:opacity-90"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20">
+                <Phone className="w-4 h-4 text-blue-400" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Call Us</p>
+                <p className="text-white font-medium text-lg">{siteContact.phoneDisplay}</p>
+                <p className="text-sm text-gray-500 mt-0.5">Mon–Fri 9AM – 6PM · Tap to call</p>
+              </div>
+            </motion.a>
 
-            {/* Office hours */}
             <div className="p-5 rounded-xl border border-white/[0.06] bg-white/[0.02]">
               <div className="flex items-center gap-2 mb-3">
                 <Clock className="w-4 h-4 text-blue-400" />
@@ -101,7 +92,6 @@ export default function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

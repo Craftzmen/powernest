@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, Lock, Eye, Share2, Clock, Mail, MapPin } from "lucide-react";
+import { Shield, Lock, Eye, Share2, Clock, Phone } from "lucide-react";
+import { siteContact } from "../lib/siteContact";
 import FooterSection from "../components/home/FooterSection";
 
 export default function PrivacyPolicy() {
@@ -185,27 +186,20 @@ export default function PrivacyPolicy() {
           {/* Contact */}
           <section className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 p-8">
             <div className="flex items-center gap-3 mb-4">
-              <Mail className="w-6 h-6 text-emerald-400" />
+              <Phone className="w-6 h-6 text-emerald-400" />
               <h2 className="text-2xl font-bold text-white">Contact Information</h2>
             </div>
             <p className="text-gray-300 mb-4">
-              If you have questions or concerns about this policy, contact us at:
+              If you have questions or concerns about this policy, call us:
             </p>
-            <div className="space-y-2">
-              <p className="text-gray-300 flex items-center gap-2">
-                <Mail className="w-4 h-4 text-emerald-400" />
-                <strong className="text-white">Email:</strong>{" "}
-                <a href="mailto:query@primeautodeals.live" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                  query@primeautodeals.live
-                </a>
-              </p>
-              <p className="text-gray-300 flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
-                <span>
-                  <strong className="text-white">Address:</strong> 3744 Amboy Road, Staten Island, New York 10308
-                </span>
-              </p>
-            </div>
+            <a
+              href={siteContact.phoneHref}
+              title={siteContact.phoneTitle}
+              className="inline-flex min-h-11 items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors font-semibold active:opacity-90"
+            >
+              <Phone className="w-4 h-4" />
+              {siteContact.phoneDisplay}
+            </a>
           </section>
         </motion.div>
       </div>

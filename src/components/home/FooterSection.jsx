@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, ArrowUpRight } from "lucide-react";
+import { siteContact } from "../../lib/siteContact";
 
 const footerLinks = {
   Services: ["Web Development", "Mobile Apps", "AI Solutions", "Cloud Services", "UI/UX Design", "DevOps"],
@@ -28,20 +29,14 @@ export default function FooterSection() {
               Transforming businesses through cutting-edge web, mobile, and AI solutions. 
               Your vision, our expertise.
             </p>
-            <div className="space-y-2">
-              <a href="mailto:query@primeautodeals.live" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                <Mail className="w-4 h-4" />
-                query@primeautodeals.live
-              </a>
-              <a href="tel:+18882868307" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
-                <Phone className="w-4 h-4" />
-                888 286 8307
-              </a>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <MapPin className="w-4 h-4" />
-                3744 Amboy Road, Staten Island, New York 10308
-              </div>
-            </div>
+            <a
+              href={siteContact.phoneHref}
+              title={siteContact.phoneTitle}
+              className="flex min-h-11 w-full max-w-xs items-center gap-2 rounded-lg py-2 text-sm text-gray-400 hover:text-blue-400 transition-colors active:opacity-90"
+            >
+              <Phone className="w-4 h-4 shrink-0" />
+              {siteContact.phoneDisplay}
+            </a>
           </div>
 
           {/* Links */}
