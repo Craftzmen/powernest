@@ -11,7 +11,7 @@ export default function CallNowBar() {
       <a
         href={siteContact.phoneHref}
         title={siteContact.phoneTitle}
-        className="flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-emerald-500 px-6 text-lg font-black uppercase tracking-wide text-white shadow-[0_4px_28px_rgba(16,185,129,0.5)] ring-2 ring-emerald-300/40 transition active:scale-[0.98] hover:bg-emerald-400 sm:text-xl"
+        className="flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-emerald-500 px-6 text-lg font-black uppercase tracking-wide text-white shadow-[0_4px_28px_rgba(16,185,129,0.5)] ring-2 ring-emerald-300/40 transition active:scale-[0.98] hover:bg-emerald-400 sm:text-xl"
       >
         <Phone className="size-6 shrink-0" aria-hidden />
         <span>Call Now</span>
