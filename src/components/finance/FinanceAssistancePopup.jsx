@@ -18,7 +18,7 @@ export default function FinanceAssistancePopup({ open, onClose, phone = siteCont
       initial={{ opacity: 0, x: 20, y: 20 }}
       animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="fixed bottom-6 right-6 z-[100] w-full max-w-sm sm:max-w-md pointer-events-auto"
+      className="fixed bottom-[5.75rem] right-4 z-[100] w-[calc(100vw-2rem)] max-w-sm pointer-events-auto sm:bottom-[6.25rem] sm:right-6 sm:max-w-md"
     >
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#030712] shadow-2xl shadow-black/60">
         {/* Top accent bar */}

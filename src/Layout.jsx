@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "./utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
+import CallNowBar from "./components/layout/CallNowBar";
 
 const navLinks = [
   { label: "Home", page: "Home" },
@@ -174,7 +175,8 @@ export default function Layout({ children }) {
       </motion.nav>
 
       {/* Page content */}
-      {children}
+      <div className="pb-28">{children}</div>
+      <CallNowBar />
     </div>
   );
 }
