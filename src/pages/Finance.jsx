@@ -174,7 +174,7 @@ export default function Finance() {
               <a
                 href={siteContact.phoneHref}
                 title={siteContact.phoneTitle}
-                className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20 active:opacity-90"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_24px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
               >
                 <Phone className="w-4 h-4" />
                 Speak to an Advisor
@@ -415,7 +415,7 @@ export default function Finance() {
                 <a
                   href={siteContact.phoneHref}
                   title={siteContact.phoneTitle}
-                  className="inline-flex min-h-11 items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg shadow-blue-600/20 active:opacity-90"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-emerald-500 px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_24px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
                 >
                   <Phone className="w-4 h-4" />
                   Speak to an Advisor

@@ -76,7 +76,7 @@ export default function FinanceAssistancePopup({ open, onClose, phone = siteCont
           <a
             href={telHref}
             title={siteContact.phoneTitle}
-            className="group flex min-h-11 w-full flex-col items-center justify-center gap-1 rounded-xl bg-blue-600 px-5 py-3.5 hover:bg-blue-500 transition-all duration-300 shadow-lg shadow-blue-600/30 active:opacity-90"
+            className="group flex min-h-11 w-full flex-col items-center justify-center gap-1 rounded-xl bg-emerald-500 px-5 py-3.5 shadow-[0_4px_28px_rgba(16,185,129,0.45)] ring-2 ring-emerald-300/40 transition-all duration-300 hover:bg-emerald-400 active:opacity-90"
           >
             <span className="flex w-full items-center justify-between gap-3">
               <span className="text-base sm:text-lg font-bold text-white tracking-tight">
