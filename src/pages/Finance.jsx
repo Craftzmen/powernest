@@ -19,6 +19,7 @@ import { createPageUrl } from "../utils";
 import FooterSection from "../components/home/FooterSection";
 import FinanceAssistancePopup from "../components/finance/FinanceAssistancePopup";
 import { siteContact } from "../lib/siteContact";
+import CallNowBar from "../components/layout/CallNowBar";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1718780138801-d93ebf484827?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
@@ -122,7 +123,7 @@ export default function Finance() {
   const [showPopup, setShowPopup] = useState(true);
 
   return (
-    <div className="bg-[#030712] min-h-screen">
+    <div className="bg-[#030712] min-h-screen pb-28">
       <FinanceAssistancePopup open={showPopup} onClose={() => setShowPopup(false)} />
 
       {/* Hero */}
@@ -433,6 +434,7 @@ export default function Finance() {
       </section>
 
       <FooterSection />
+      <CallNowBar />
     </div>
   );
 }
